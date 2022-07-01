@@ -5,7 +5,7 @@ import { moneyPyramid, quizQuestions } from './data'
 
 const App = () => {
   const [questionNumber, setQuestionNumber] = useState(1)
-  const [timeOut, setTimeOut] = useState(false)
+  const [timeElapsed, setTimeElapsed] = useState(false)
 
   return (
     <div className="app">
@@ -16,7 +16,7 @@ const App = () => {
         <div className="bottom">
             <Quiz 
               quizQuestions={quizQuestions} 
-              setTimeOut={setTimeOut}
+              setTimeOut={setTimeElapsed}
               questionNumber={questionNumber} 
               setQuestionNumber={setQuestionNumber} 
             />

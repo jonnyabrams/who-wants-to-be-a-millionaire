@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Quiz = ({ quizQuestions, setTimeOut, questionNumber, setQuestionNumber }) => {
+const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber }) => {
   
   const [question, setQuestion] = useState(null)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
@@ -17,8 +17,6 @@ const Quiz = ({ quizQuestions, setTimeOut, questionNumber, setQuestionNumber }) 
       setClassName(answer.correct ? "answer correct" : "answer incorrect")
     }, 3000)
   }
-
-  // NB difference between setTimeOut & setTimeout !
   
   return (
     <div className="quiz">
