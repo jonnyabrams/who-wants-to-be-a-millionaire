@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Quiz from './components/Quiz'
 import { moneyPyramid } from './data'
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
         <div className="top">
           <div className="timer">30</div>
         </div>
-        <div className="bottom">question and answers</div>
+        <div className="bottom"><Quiz /></div>
       </div>
       <div className="pyramid">
         <ul className='money-list'>
