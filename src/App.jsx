@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Quiz from './components/Quiz'
 import { moneyPyramid, quizQuestions } from './data'
@@ -7,6 +7,10 @@ const App = () => {
   const [questionNumber, setQuestionNumber] = useState(1)
   const [timeElapsed, setTimeElapsed] = useState(false)
   const [amountEarned, setAmountEarned] = useState("£0")
+
+  useEffect(() => {
+    questionNumber > 1 && setAmountEarned(moneyPyramid.find(m => m.id === questionNumber - 1).amount)
+  }, [moneyPyramid,  questionNumber])
 
   return (
     <div className="app">
