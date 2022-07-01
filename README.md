@@ -1,1 +1,3 @@
-# who-wants-to-be-a-millionaire
+# Who Wants to Be a Millionaire?
+
+Playable game using React.js
