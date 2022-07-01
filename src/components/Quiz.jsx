@@ -1,6 +1,6 @@
 
 
-const Quiz = () => {
+const Quiz = ({ quizQuestions, setTimeOut, questionNumber, setQuestionNumber }) => {
   return (
     <div className="quiz">
       <div className="question">Is Diego a cat?</div>

@@ -13,7 +13,14 @@ const App = () => {
         <div className="top">
           <div className="timer">30</div>
         </div>
-        <div className="bottom"><Quiz /></div>
+        <div className="bottom">
+            <Quiz 
+              quizQuestions={quizQuestions} 
+              setTimeOut={setTimeOut}
+              questionNumber={questionNumber} 
+              setQuestionNumber={setQuestionNumber} 
+            />
+          </div>
       </div>
       <div className="pyramid">
         <ul className='money-list'>
