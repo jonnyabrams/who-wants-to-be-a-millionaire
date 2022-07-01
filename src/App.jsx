@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import Quiz from './components/Quiz'
-import { moneyPyramid } from './data'
+import { moneyPyramid, quizQuestions } from './data'
 
 const App = () => {
   const [questionNumber, setQuestionNumber] = useState(1)
+  const [timeOut, setTimeOut] = useState(false)
 
   return (
     <div className="app">
