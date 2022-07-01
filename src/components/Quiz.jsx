@@ -13,7 +13,12 @@ const Quiz = ({ quizQuestions, setTimeOut, questionNumber, setQuestionNumber }) 
   const handleClick = (answer) => {
     setSelectedAnswer(answer)
     setClassName('answer active')
+    setTimeout(() => {
+      setClassName(answer.correct ? "answer correct" : "answer incorrect")
+    }, 3000)
   }
+
+  // NB difference between setTimeOut & setTimeout !
   
   return (
     <div className="quiz">
