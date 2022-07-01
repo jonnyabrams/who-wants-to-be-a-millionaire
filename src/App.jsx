@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Quiz from './components/Quiz'
+import Timer from './components/Timer'
 import { moneyPyramid, quizQuestions } from './data'
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
 
   useEffect(() => {
     questionNumber > 1 && setAmountEarned(moneyPyramid.find(m => m.id === questionNumber - 1).amount)
-  }, [moneyPyramid,  questionNumber])
+  }, [questionNumber])
 
   return (
     <div className="app">
@@ -20,7 +21,7 @@ const App = () => {
         ) : (
           <>
             <div className="top">
-              <div className="timer">30</div>
+              <div className="timer"><Timer setTimeElapsed={setTimeElapsed} questionNumber={questionNumber} /></div>
             </div>
             <div className="bottom">
               <Quiz 
