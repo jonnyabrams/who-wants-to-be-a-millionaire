@@ -10,12 +10,26 @@ const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber
     setQuestion(quizQuestions[questionNumber - 1])
   }, [quizQuestions, questionNumber])
 
+  const delay = (duration, callback) => {
+    setTimeout(() => {
+      callback()
+    }, duration)
+  }
+
   const handleClick = (answer) => {
     setSelectedAnswer(answer)
     setClassName('answer active')
-    setTimeout(() => {
+    delay(3000, () => 
       setClassName(answer.correct ? "answer correct" : "answer incorrect")
-    }, 3000)
+    )
+    delay(6000, () => {
+      if (answer.correct) {
+        setQuestionNumber((prev) => prev + 1)
+        setSelectedAnswer(null)
+      } else {
+        setTimeElapsed(true)
+      }
+    })
   }
   
   return (
