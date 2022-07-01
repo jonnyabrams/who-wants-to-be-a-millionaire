@@ -12,7 +12,7 @@ const App = () => {
     <div className="app">
       <div className="main">
         { timeElapsed ? (
-          <h1>You earned: {amountEarned}</h1>
+          <h1 className='end-text'>You earned: {amountEarned}</h1>
         ) : (
           <>
             <div className="top">
