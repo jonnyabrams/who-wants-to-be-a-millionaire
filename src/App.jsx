@@ -1,27 +1,21 @@
+import { useState } from 'react'
 import './App.css'
+import { moneyPyramid } from './data'
 
 const App = () => {
+  const [questionNumber, setQuestionNumber] = useState(1)
+
   return (
     <div className="app">
       <div className="main">main</div>
       <div className="pyramid">
         <ul className='money-list'>
-          <li className='money-list-item'>
-            <span className='money-list-item-number'>4</span>
-            <span className='money-list-item-amount'>£400</span>
-          </li>
-          <li className='money-list-item'>
-            <span className='money-list-item-number'>3</span>
-            <span className='money-list-item-amount'>£300</span>
-          </li>
-          <li className='money-list-item'>
-            <span className='money-list-item-number'>2</span>
-            <span className='money-list-item-amount'>£200</span>
-          </li>
-          <li className='money-list-item'>
-            <span className='money-list-item-number'>1</span>
-            <span className='money-list-item-amount'>£100</span>
-          </li>
+          { moneyPyramid.map((stage) => (
+            <li className={ questionNumber === stage.id ? 'money-list-item active' : 'money-list-item' }>
+              <span className='money-list-item-number'>{stage.id}</span>
+              <span className='money-list-item-amount'>{stage.amount}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
