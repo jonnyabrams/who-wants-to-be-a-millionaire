@@ -8,7 +8,7 @@ import WonMillion from './components/WonMillion'
 
 const App = () => {
   const [username, setUsername] = useState(null)
-  const [questionNumber, setQuestionNumber] = useState(15)
+  const [questionNumber, setQuestionNumber] = useState(1)
   const [wonMillion, setWonMillion] = useState(false)
   const [timeElapsed, setTimeElapsed] = useState(false)
   const [amountEarned, setAmountEarned] = useState("£0")
