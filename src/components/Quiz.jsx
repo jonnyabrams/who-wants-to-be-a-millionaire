@@ -5,7 +5,7 @@ import correct from '../assets/sounds/correct.mp3'
 import wrong from '../assets/sounds/wrong.mp3'
 import wait from '../assets/sounds/short-wait.mp3'
 
-const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber }) => {
+const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber, setWonMillion }) => {
   
   const [question, setQuestion] = useState(null)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
@@ -37,7 +37,10 @@ const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber
       setClassName(answer.correct ? "answer correct" : "answer incorrect")
     )
     delay(5000, () => {
-      if (answer.correct) {
+      if (answer.correct && questionNumber === 15) {
+        correctAnswer()
+        setWonMillion(true)
+      } else if (answer.correct) {
         correctAnswer()
         delay(1000, () => {
           setQuestionNumber((prev) => prev + 1)
