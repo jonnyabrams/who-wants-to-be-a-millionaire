@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/97295867/177001057-d26fc576-733c-430b-
 
 ---
 
-## Improvements I would like to make
+##  Improvements I would like to make
 
 It would be great to implement the '50-50', 'ask the audience' and 'phone a friend' lifelines so I may yet revisit this project if I find the time.
 
