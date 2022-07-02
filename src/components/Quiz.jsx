@@ -3,7 +3,7 @@ import useSound from 'use-sound'
 import play from '../assets/sounds/play.mp3'
 import correct from '../assets/sounds/correct.mp3'
 import wrong from '../assets/sounds/wrong.mp3'
-
+import wait from '../assets/sounds/short-wait.mp3'
 
 const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber }) => {
   
@@ -13,6 +13,7 @@ const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber
   const [letsPlay] = useSound(play)
   const [correctAnswer] = useSound(correct)
   const [wrongAnswer] = useSound(wrong)
+  const [madeChoice] = useSound(wait)
 
   useEffect(() => {
     letsPlay()
@@ -29,6 +30,7 @@ const Quiz = ({ quizQuestions, setTimeElapsed, questionNumber, setQuestionNumber
   }
 
   const handleClick = (answer) => {
+    madeChoice()
     setSelectedAnswer(answer)
     setClassName('answer active')
     delay(3000, () => 
