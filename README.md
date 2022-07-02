@@ -1,6 +1,15 @@
-# Who Wants to Be a Millionaire?
+# Wu Wants to Be a Millionaire?
 
-Playable game using React.js
+A playable <em>Who Wants to Be a Millionaire?</em>-style game using React.js, with all questions being about Wu-Tang Clan.
 
-CSS animation
-use-sound library for playing sound
+The game comes complete with authentic <em>Millionaire</em> sound effects at the start of a game and upon answering correctly or incorrectly, while selecting your answer triggers suspenseful music and a delayed reveal using CSS animation.
+
+<img width="1440" alt="Screenshot 2022-07-02 at 13 47 40" src="https://user-images.githubusercontent.com/97295867/177001418-e20fc03b-7848-4a5a-87d5-14a96b486cfc.png">
+
+---
+
+## Video demo
+
+https://user-images.githubusercontent.com/97295867/177001057-d26fc576-733c-430b-93b1-aab706e4c6fb.mp4
+
+[Jonny Abrams](https://github.com/jonnyabrams)
