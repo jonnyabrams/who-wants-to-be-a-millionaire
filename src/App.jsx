@@ -4,10 +4,12 @@ import Quiz from './components/Quiz'
 import Timer from './components/Timer'
 import Start from './components/Start'
 import { moneyPyramid, quizQuestions } from './data'
+import WonMillion from './components/WonMillion'
 
 const App = () => {
   const [username, setUsername] = useState(null)
-  const [questionNumber, setQuestionNumber] = useState(1)
+  const [questionNumber, setQuestionNumber] = useState(15)
+  const [wonMillion, setWonMillion] = useState(false)
   const [timeElapsed, setTimeElapsed] = useState(false)
   const [amountEarned, setAmountEarned] = useState("£0")
 
@@ -17,7 +19,7 @@ const App = () => {
 
   return (
     <div className="app">
-      { username ? (
+      { wonMillion ? <WonMillion username={username} /> : username ? (
         <>
           <div className="main">
             { timeElapsed ? (
@@ -32,7 +34,8 @@ const App = () => {
                     quizQuestions={quizQuestions} 
                     setTimeElapsed={setTimeElapsed}
                     questionNumber={questionNumber} 
-                    setQuestionNumber={setQuestionNumber} 
+                    setQuestionNumber={setQuestionNumber}
+                    setWonMillion={setWonMillion} 
                   />
                 </div>
               </>
